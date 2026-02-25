@@ -6,40 +6,43 @@ export const HeroSection = (): JSX.Element => {
     <section className="relative w-full min-h-[500px]" style={{ backgroundImage: 'url(/hero-bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[#1a2028]/80 pointer-events-none" />
+
       {/* Navigation Bar */}
       <div className="relative z-10 w-full bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center">
+        <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between gap-4">
+          {/* Logo */}
+          <div className="flex items-center flex-shrink-0">
             <img
               src="/hopkins-logo.webp"
               alt="The Law Offices of Robert R. Hopkins, LLC"
-              className="h-28 w-auto object-contain"
+              className="h-16 md:h-28 w-auto object-contain"
             />
           </div>
 
+          {/* Phone */}
           <div className="flex items-center">
             <a
               href="tel:4842616770"
-              className="flex items-center gap-2 font-body text-hopkins-dark hover:text-hopkins-accent transition-colors text-2xl font-semibold"
+              className="flex items-center gap-1.5 font-body text-hopkins-dark hover:text-hopkins-accent transition-colors font-semibold text-base md:text-2xl"
             >
-              <Phone className="w-7 h-7 text-hopkins-accent" />
-              (484) 261-6770
+              <Phone className="w-4 h-4 md:w-7 md:h-7 text-hopkins-accent flex-shrink-0" />
+              <span className="whitespace-nowrap">(484) 261-6770</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-16 md:py-24 text-center">
-        <h1 className="font-heading text-white text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-4">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-12 md:py-24 text-center">
+        <h1 className="font-heading text-white text-3xl md:text-5xl lg:text-6xl font-normal leading-tight mb-4">
           Experienced Divorce &amp; Family Law Attorney in Delaware County
         </h1>
 
-        <h2 className="font-body text-white/80 text-xl md:text-2xl font-semibold mb-6">
+        <h2 className="font-body text-white/80 text-lg md:text-2xl font-semibold mb-6">
           Strategic, Individualized Representation for Uncontested, Contested, and High-Asset Divorces
         </h2>
 
-        <p className="font-body text-white/70 text-base max-w-3xl mx-auto leading-relaxed mb-8">
+        <p className="font-body text-white/70 text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-8">
           Whether you are mutually parting ways or facing a complex, high-stakes divorce, you deserve a legal advocate who will stand firmly by your side. At The Law Offices of Robert R. Hopkins, LLC, we provide compassionate, steady guidance to protect your financial interests and help you step confidently into your next chapter.
         </p>
 

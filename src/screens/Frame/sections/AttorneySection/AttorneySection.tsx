@@ -9,7 +9,7 @@ export const AttorneySection = (): JSX.Element => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          <div className="w-full h-full min-h-[400px]">
+          <div className="w-full h-full min-h-[280px] md:min-h-[400px]">
             <img
               src="/rob-hopkins-attorney.webp"
               alt="Attorney Robert R. Hopkins, Managing Partner, The Law Offices of Robert R. Hopkins, LLC"

@@ -15,7 +15,7 @@ export const ContactSection = (): JSX.Element => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-5 md:p-8 rounded-lg shadow-md">
             <h3 className="font-heading text-hopkins-dark text-2xl font-normal mb-6">
               Request Your Consultation
             </h3>
@@ -76,7 +76,7 @@ export const ContactSection = (): JSX.Element => {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-5 md:p-8 rounded-lg shadow-md">
               <h3 className="font-heading text-hopkins-dark text-2xl font-normal mb-6">
                 Contact Information
               </h3>
@@ -106,7 +106,7 @@ export const ContactSection = (): JSX.Element => {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-5 md:p-8 rounded-lg shadow-md">
               <h3 className="font-heading text-hopkins-dark text-2xl font-normal mb-6">
                 Office Location
               </h3>
