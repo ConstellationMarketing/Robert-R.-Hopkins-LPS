@@ -9,7 +9,7 @@ export const HeroSection = (): JSX.Element => {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fc8a7b33c1f3e4309983e45cabed92535%2Ff11b4b5467fa423dba84c71fb931da74?format=webp&width=200"
+              src="/hopkins-logo.webp"
               alt="The Law Offices of Robert R. Hopkins, LLC"
               className="h-20 w-auto object-contain"
             />
