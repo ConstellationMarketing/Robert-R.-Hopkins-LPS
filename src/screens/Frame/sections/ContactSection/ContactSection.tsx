@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+
 export const ContactSection = (): JSX.Element => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError("");
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact-form",
+          ...formData,
+        }),
+      });
+      window.location.href = "/thank-you";
+    } catch (err) {
+      setError("Something went wrong. Please call us at (484) 261-6770.");
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="w-full bg-hopkins-light py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4">
@@ -22,22 +63,18 @@ export const ContactSection = (): JSX.Element => {
             <form
               id="contact-form"
               name="contact-form"
-              method="POST"
-              action="/thank-you"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
               className="space-y-4"
             >
-              {/* Required hidden inputs for Netlify */}
+              {/* Required for Netlify Forms */}
               <input type="hidden" name="form-name" value="contact-form" />
-              <p className="hidden">
-                <label>Do not fill: <input name="bot-field" /></label>
-              </p>
 
               <div>
                 <input
                   type="text"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Name *"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded font-body text-sm focus:outline-none focus:border-hopkins-accent"
@@ -48,6 +85,8 @@ export const ContactSection = (): JSX.Element => {
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email *"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded font-body text-sm focus:outline-none focus:border-hopkins-accent"
@@ -58,6 +97,8 @@ export const ContactSection = (): JSX.Element => {
                 <input
                   type="tel"
                   name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Phone *"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded font-body text-sm focus:outline-none focus:border-hopkins-accent"
@@ -67,6 +108,8 @@ export const ContactSection = (): JSX.Element => {
               <div>
                 <textarea
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Message *"
                   rows={5}
                   required
@@ -74,11 +117,16 @@ export const ContactSection = (): JSX.Element => {
                 ></textarea>
               </div>
 
+              {error && (
+                <p className="text-red-600 font-body text-sm">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-hopkins-accent hover:bg-[#0059b8] text-white font-inter font-medium text-sm px-8 py-3 rounded-full border border-hopkins-accent transition-all duration-150 uppercase tracking-[2px] whitespace-nowrap inline-block"
+                disabled={submitting}
+                className="w-full bg-hopkins-accent hover:bg-[#0059b8] disabled:opacity-60 text-white font-inter font-medium text-sm px-8 py-3 rounded-full border border-hopkins-accent transition-all duration-150 uppercase tracking-[2px] whitespace-nowrap inline-block"
               >
-                Send Message
+                {submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
