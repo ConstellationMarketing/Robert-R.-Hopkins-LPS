@@ -126,7 +126,7 @@ export const ContactSection = (): JSX.Element => {
 
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.123456789!2d-75.387!3d39.917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6e5e2e2e2e2e3%3A0x1234567890abcdef!2s24+Veterans+Square%2C+Media%2C+PA+19063!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            src="https://maps.google.com/maps?q=24+Veterans+Square,+Media,+PA+19063&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="400"
             style={{ border: 0 }}

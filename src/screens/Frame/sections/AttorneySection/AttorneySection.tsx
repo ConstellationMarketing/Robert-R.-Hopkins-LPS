@@ -9,8 +9,12 @@ export const AttorneySection = (): JSX.Element => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          <div className="w-full h-full min-h-[400px] bg-hopkins-dark/10 rounded-lg flex items-center justify-center">
-            <span className="font-body text-hopkins-dark/40 text-sm">Attorney photo coming soon</span>
+          <div className="w-full h-full min-h-[400px]">
+            <img
+              src="/rob-hopkins-attorney.webp"
+              alt="Attorney Robert R. Hopkins, Managing Partner, The Law Offices of Robert R. Hopkins, LLC"
+              className="w-full h-full object-cover object-top rounded-lg"
+            />
           </div>
 
           <div className="flex flex-col justify-center space-y-6">
