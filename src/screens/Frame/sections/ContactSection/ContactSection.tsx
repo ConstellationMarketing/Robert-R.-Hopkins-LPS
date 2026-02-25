@@ -23,7 +23,7 @@ export const ContactSection = (): JSX.Element => {
               id="contact-form"
               name="contact-form"
               method="POST"
-              action="/thank-you.html"
+              action="/thank-you"
               data-netlify="true"
               netlify-honeypot="bot-field"
               className="space-y-4"
