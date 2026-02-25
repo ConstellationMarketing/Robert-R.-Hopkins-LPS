@@ -1,22 +1,26 @@
 import React from "react";
+import { Phone } from "lucide-react";
 
 export const HeroSection = (): JSX.Element => {
   return (
     <section className="relative w-full min-h-[500px] bg-[#384450]">
       {/* Navigation Bar */}
-      <div className="relative w-full bg-[#384450] border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="relative w-full bg-white border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center">
-            <span className="font-heading text-white text-lg font-semibold leading-tight">
-              The Law Offices of Robert R. Hopkins, LLC
-            </span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fc8a7b33c1f3e4309983e45cabed92535%2Ff11b4b5467fa423dba84c71fb931da74?format=webp&width=200"
+              alt="The Law Offices of Robert R. Hopkins, LLC"
+              className="h-14 w-auto object-contain"
+            />
           </div>
 
-          <div className="flex flex-col items-end">
+          <div className="flex items-center">
             <a
               href="tel:4842616770"
-              className="font-body text-white hover:text-hopkins-accent transition-colors text-lg font-semibold"
+              className="flex items-center gap-2 font-body text-hopkins-dark hover:text-hopkins-accent transition-colors text-lg font-semibold"
             >
+              <Phone className="w-5 h-5 text-hopkins-accent" />
               (484) 261-6770
             </a>
           </div>
