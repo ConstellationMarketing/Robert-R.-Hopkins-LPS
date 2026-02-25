@@ -5,7 +5,7 @@ export const HeroSection = (): JSX.Element => {
   return (
     <section className="relative w-full min-h-[500px]" style={{ backgroundImage: 'url(/hero-bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[#1a2028]/95 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#1a2028]/80 pointer-events-none" />
       {/* Navigation Bar */}
       <div className="relative z-10 w-full bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
