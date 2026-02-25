@@ -11,16 +11,16 @@ export const HeroSection = (): JSX.Element => {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fc8a7b33c1f3e4309983e45cabed92535%2Ff11b4b5467fa423dba84c71fb931da74?format=webp&width=200"
               alt="The Law Offices of Robert R. Hopkins, LLC"
-              className="h-14 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </div>
 
           <div className="flex items-center">
             <a
               href="tel:4842616770"
-              className="flex items-center gap-2 font-body text-hopkins-dark hover:text-hopkins-accent transition-colors text-lg font-semibold"
+              className="flex items-center gap-2 font-body text-hopkins-dark hover:text-hopkins-accent transition-colors text-2xl font-semibold"
             >
-              <Phone className="w-5 h-5 text-hopkins-accent" />
+              <Phone className="w-7 h-7 text-hopkins-accent" />
               (484) 261-6770
             </a>
           </div>
