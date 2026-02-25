@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export const ThankYou = (): JSX.Element => {
   return (
-    <div className="w-full min-h-screen bg-wosnik-light flex items-center justify-center">
+    <div className="w-full min-h-screen bg-hopkins-light flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 py-16 text-center">
         <div className="bg-white rounded-lg shadow-lg p-12">
           <div className="flex justify-center mb-6">
@@ -12,36 +12,47 @@ export const ThankYou = (): JSX.Element => {
             </div>
           </div>
 
-          <h1 className="font-heading text-wosnik-dark text-4xl md:text-5xl font-normal mb-6">
-            Thank You!
+          <h1 className="font-heading text-hopkins-dark text-4xl md:text-5xl font-normal mb-6">
+            Your Request Has Been Received
           </h1>
 
-          <p className="font-body text-wosnik-dark text-lg mb-4">
-            We've received your message and appreciate you contacting us.
+          <p className="font-body text-hopkins-dark text-lg mb-8">
+            Attorney Robert Hopkins or a member of our team will contact you shortly.
           </p>
 
-          <p className="font-body text-gray-600 text-base mb-8">
-            One of our experienced attorneys will review your case and get back to you as soon as possible. We typically respond within 24 hours during business days.
-          </p>
+          <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8 text-left">
+            <p className="font-body text-hopkins-dark font-semibold mb-4">Next Steps:</p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-hopkins-accent mr-3 mt-0.5 flex-shrink-0" />
+                <span className="font-body text-gray-700 text-base">Watch for a call or email reply from our office</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-hopkins-accent mr-3 mt-0.5 flex-shrink-0" />
+                <span className="font-body text-gray-700 text-base">Gather any relevant family or financial documents</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-hopkins-accent mr-3 mt-0.5 flex-shrink-0" />
+                <span className="font-body text-gray-700 text-base">We will discuss your goals and outline the best path forward</span>
+              </li>
+            </ul>
+          </div>
 
-          <div className="bg-wosnik-accent/10 border border-wosnik-accent/30 rounded-lg p-6 mb-8">
-            <p className="font-body text-wosnik-dark font-semibold mb-2">
+          <div className="bg-hopkins-accent/10 border border-hopkins-accent/30 rounded-lg p-6 mb-8">
+            <p className="font-body text-hopkins-dark font-semibold mb-2">
               Need Immediate Assistance?
             </p>
             <a
-              href="tel:6784036418"
-              className="font-heading text-wosnik-accent text-2xl font-semibold hover:opacity-80 transition-opacity"
+              href="tel:4842616770"
+              className="font-heading text-hopkins-accent text-2xl font-semibold hover:opacity-80 transition-opacity"
             >
-              (678) 403-6418
+              (484) 261-6770
             </a>
-            <p className="font-body text-gray-600 text-sm mt-2">
-              Available 24/7
-            </p>
           </div>
 
           <a
             href="/"
-            className="inline-block bg-wosnik-accent hover:bg-wosnik-accent/80 text-wosnik-dark font-inter font-medium text-sm px-8 py-3 rounded-full border border-wosnik-accent transition-all duration-150 uppercase tracking-[2px]"
+            className="inline-block bg-hopkins-accent hover:bg-[#0059b8] text-white font-inter font-medium text-sm px-8 py-3 rounded-full border border-hopkins-accent transition-all duration-150 uppercase tracking-[2px]"
           >
             Return to Homepage
           </a>
