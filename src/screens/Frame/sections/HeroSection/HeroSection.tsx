@@ -13,7 +13,7 @@ export const HeroSection = (): JSX.Element => {
             <img
               src="/hopkins-logo.webp"
               alt="The Law Offices of Robert R. Hopkins, LLC"
-              className="h-20 w-auto object-contain"
+              className="h-28 w-auto object-contain"
             />
           </div>
 
